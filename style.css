@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Krona+One&display=swap');
+
+
+:root {
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --bota-azul: #167bf7;
+    --cor-de-fundo: #00030C;
+    --fonte-principal: 'Inter';
+    --botao_azul_efeito: #3c92fa;
+    
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.principal {
+    /* Coloca uma imagem atras de outra img */
+    background-image: url("img/Background.png");
+    /* Não repete a img do background */
+    background-repeat: no-repeat;
+    /* Preenche todo o cointainer da pagina pra não deixar buraco */
+    background-size: contain;
+    align-items: center;
+    /* A section criada por podrao ela vem o display block então alinha tudo que contem nesse bloco */
+    text-align: center;
+}
+
+.container {
+    height: 100vh;
+    /* Separa cada elemento criado*/
+    display: grid;
+    /* Dessa maneira, a primeira coluna ocupará metade da tela e em seguida constroi outra coluna com a metade da tela. */
+    grid-template-columns: 50% 50%;
+}
+
+.container__botao {
+    background-color: var(--bota-azul);
+    border-radius: 5px;
+    padding: 1em;
+    color: var(--branco-principal);
+    /* Ocupa o espaço dele inteiro o bloco**/
+    display: block;
+    text-decoration: none;
+    margin-bottom: 1em;
+}
+
+.botao_secundario {
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+}
+
+.container__aviso {
+    font-size: 12px;
+    color: var(--cinza-secundario);
+}
+
+.container__titulo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.container__imagem {
+    margin: 1em 0 2em 0;
+}
+
+.container__caixa {
+    margin: 0 10em;
+}
+
+.secundario__imagem {
+    width: 80%;
+}
+
+.secundario {
+    align-items: center;
+    margin: 0 10em;
+}
+
+.descricao__titulo {
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto {
+    color: var(--cinza-secundario);
+}
+
+.secundario__botao {
+    /* Transformo em linha (ocupa só o espaço da linha) junto com o block pode mudar o tamnho do botao*/ 
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.container__descricao {
+    padding: 2em;
+}
+
+.dispositivos__lista {
+    /* direção padrao de um display flex é a row (linha) que fez todos os itens ficar um do lado do outro*/
+    display: flex;
+    justify-content: center;
+    /* tira os pontinhos de uma lista */
+    list-style-type: none;
+    margin: 5em 0em;
+}
+
+.dispositivos {
+    text-align: center;
+}
+
+.dispositivos__titulo {
+    font-size: 48px;
+    color: var(--branco-principal);
+}
+
+.lista__item {
+    font-size: 32px;
+    color: var(--branco-principal);
+}
+
+.rodape {
+    text-align: center;
+    margin: 5em 3em;
+    
+}
+
+.rodape__lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    gap: 1em;
+    margin: 2em 0 1.5em;
+}
+
+.lista__link a {
+    color: var(--branco-principal);
+    text-decoration: none;
+}
+
+.rodape__texto {
+    color: var(--cinza-secundario);
+    font-size: 14px;
+    margin: 1.5em 0;
+
+}
+
+.lista__link a:hover {
+    color: var(--bota-azul);
+}
+
+.lista__link a:active {
+    color: purple;
+}
+
+.container__botao:hover {
+    background-color: var(--botao_azul_efeito);
+    color: var(--cor-de-fundo);
+}
+
+@media screen and (max-width: 768px){
+    .container {
+        /* Colocamos display block pq cada elemento vai ficar igual um bloco em cima do outro*/
+        display: block;
+        background-image: none;
+        
+    }
+    
+    .container__imagem {
+        width: 50vw;
+    }
+
+    .container__caixa {
+        margin: 2em 2em;
+    }
+
+    .secundario {
+        margin: 0;
+        text-align: center;
+    }
+
+    .secundario__imagem {
+        width: 50vw;
+    }
+
+    .dispositivos__lista {
+        display: block;
+    }
+
+    .rodape__lista {
+        display: block;
+    }
+    
+}
+
+
+
+
+/* :focus: é aplicada quando um elemento está em foco, pode ser pelo clique do mouse ou seleção pelo teclado. Um exemplo é quando os campos de escrita em formulários estão selecionados para o usuário escrever.
+
+:hover: detecta quando um usuário está com o mouse em cima do elemento, sem necessariamente estar clicando.
+
+:active: detecta quando o elemento está ativo, quando há uma interação, por exemplo: o link <a> está sendo clicado.
+
+:visited: detecta quando o link <a> já foi visitado, ou seja, se você já clicou anteriormente naquele link.
+
+:link: detecta quando é um link <a> que nunca foi clicado antes. */
